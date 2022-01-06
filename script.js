@@ -34,7 +34,7 @@ function colorOnLoad() {
       let cor1 = document.getElementById("ball1").style.backgroundColor
       document.querySelector("#rgb-color").innerHTML = "Adivinhe qual é essa cor: " + cor1;
       document.getElementById("ball1").classList.add("win")
-      
+
       break
     case 2:
       let cor2 = document.getElementById("ball2").style.backgroundColor
@@ -66,12 +66,15 @@ function colorOnLoad() {
   resposta.innerHTML = "Escolha uma cor"
 }
 
-function resposta(cor){
-  if(cor.classList.length == 2){
+function resposta(cor) {
+  let pontos = document.getElementById("score")
+  if (cor.classList.length == 2) {
     document.getElementById("answer").innerHTML = "Acertou!"
-    document.querySelector(".win").classList.remove("win")
-  }else{
+    let scoreUp = parseInt(pontos.innerText) + 3
+    pontos.innerText = scoreUp
+  } else {
     document.getElementById("answer").innerHTML = "Errou! Tente novamente!"
+    pontos.innerText = 0
   }
 }
 
