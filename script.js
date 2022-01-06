@@ -28,28 +28,52 @@ function colorOnLoad() {
   document.getElementById("ball5").style.backgroundColor = "rgb(" + cor5[0] + "," + cor5[1] + "," + cor5[2] + ")"
   document.getElementById("ball6").style.backgroundColor = "rgb(" + cor6[0] + "," + cor6[1] + "," + cor6[2] + ")"
 
-  let randoColorText = parseInt(Math.random() * 6)
-  switch(randoColorText){
+  let randoColorText = parseInt(Math.random() * 6) + 1
+  switch (randoColorText) {
     case 1:
       let cor1 = document.getElementById("ball1").style.backgroundColor
       document.querySelector("#rgb-color").innerHTML = "Adivinhe qual é essa cor: " + cor1;
+      document.getElementById("ball1").classList.add("win")
+      
+      break
     case 2:
       let cor2 = document.getElementById("ball2").style.backgroundColor
       document.querySelector("#rgb-color").innerHTML = "Adivinhe qual é essa cor: " + cor2;
+      document.getElementById("ball2").classList.add("win")
+      break
     case 3:
       let cor3 = document.getElementById("ball3").style.backgroundColor
       document.querySelector("#rgb-color").innerHTML = "Adivinhe qual é essa cor: " + cor3;
+      document.getElementById("ball3").classList.add("win")
+      break
     case 4:
       let cor4 = document.getElementById("ball4").style.backgroundColor
       document.querySelector("#rgb-color").innerHTML = "Adivinhe qual é essa cor: " + cor4;
+      document.getElementById("ball4").classList.add("win")
+      break
     case 5:
       let cor5 = document.getElementById("ball5").style.backgroundColor
       document.querySelector("#rgb-color").innerHTML = "Adivinhe qual é essa cor: " + cor5;
+      document.getElementById("ball5").classList.add("win")
+      break
     case 6:
       let cor6 = document.getElementById("ball6").style.backgroundColor
       document.querySelector("#rgb-color").innerHTML = "Adivinhe qual é essa cor: " + cor6;
-       
-    }
+      document.getElementById("ball6").classList.add("win")
+      break
+  }
+  let resposta = document.querySelector("#answer")
+  resposta.innerHTML = "Escolha uma cor"
 }
+
+function resposta(cor){
+  if(cor.classList.length == 2){
+    document.getElementById("answer").innerHTML = "Acertou!"
+    document.querySelector(".win").classList.remove("win")
+  }else{
+    document.getElementById("answer").innerHTML = "Errou! Tente novamente!"
+  }
+}
+
 
 window.onload = colorOnLoad()
