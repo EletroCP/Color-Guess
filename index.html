@@ -11,6 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
 </head>
 <body>
+  <span id="scoreBoard">
+    <h3>Sua pontuação foi: <span id="possGame" class="score">0</span></h3>
+    <input type="text" id="playerName" placeholder="Escreva seu nome">
+    <main id="players">
+    </main>
+    <button id="removeBoard" class="reset-game" disabled>Restart</button>
+  </span>
   <header id="header">
     <h3 id="title">
       <img id="logo" src="./src/logo.png" alt="Pick a color">
@@ -37,7 +44,7 @@
     </div>
       <h3 id="answer"></h3>
       <div class="centerDiv">
-        <button id="reset-game">Restart</button>
+        <button id="reset-game" class="reset-game">Restart</button>
       </div>
       <div class="centerDiv">
         <h3>Score: <span id="score">0</span></h3>
