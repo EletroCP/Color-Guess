@@ -35,18 +35,34 @@ function colorOnLoad() {
   colorRight();
 }
 
+const awnser = document.getElementById('answer');
+
 function resposta({ target }) {
   const pontos = document.getElementById('score');
   if (target.classList.length === 2) {
-    document.getElementById('answer').innerHTML = 'Acertou!';
+    awnser.innerHTML = 'Acertou!';
     const scoreUp = parseInt(pontos.innerText, 10) + 3;
     pontos.innerText = scoreUp;
     colorOnLoad();
   } else {
-    document.getElementById('answer').innerHTML = 'Errou! Tente novamente!';
+    awnser.innerHTML = 'Errou! Tente novamente!';
     pontos.innerText = 0;
+    balls.forEach((element) => {
+      element.removeEventListener('click', resposta);
+    });
   }
 }
+
+const addAwnser = () => {
+  awnser.innerHTML = '';
+  balls.forEach((element) => {
+    element.addEventListener('click', resposta);
+  });
+  colorOnLoad();
+};
+
+const resetButton = document.getElementById('reset-game');
+resetButton.addEventListener('click', addAwnser);
 
 balls.forEach((element) => {
   element.addEventListener('click', resposta);
