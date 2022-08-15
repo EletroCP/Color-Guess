@@ -138,6 +138,10 @@ body {
     border-color: red;
   }
 
+  #secondContainer {
+    padding-bottom: 22px;
+  }
+
 }
 
 /* @media screen and ( min-width : 426px ) and ( max-width : 768px ) {}
