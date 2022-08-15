@@ -1,4 +1,4 @@
-const playesPoints = [];
+let playesPoints = [];
 const timeElapsed = Date.now();
 const today = new Date(timeElapsed);
 
@@ -59,6 +59,9 @@ const loadScore = () => {
 };
 
 function colorOnLoad() {
+  if (localStorage.score) {
+    playesPoints = JSON.parse(localStorage.score);
+  } else { playesPoints = []; }
   loadScore();
   colorElements();
   colorRight();
@@ -114,6 +117,10 @@ playerInput.addEventListener('keyup', ({ target }) => {
   }
 });
 
+const saveBoard = () => {
+  localStorage.score = JSON.stringify(playesPoints);
+};
+
 removeBoard.addEventListener('click', () => {
   const objectBoard = {
     name: playerInput.value,
@@ -129,6 +136,7 @@ removeBoard.addEventListener('click', () => {
   boardScreen.style.display = 'none';
   possGameScore.innerText = 0;
   if (playesPoints.length >= 8) playesPoints.pop();
+  saveBoard();
   addAwnser();
 });
 
