@@ -1,24 +1,96 @@
-.ball {
-  background-color: aquamarine;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px black solid;
-
+* {
+  padding: 0;
+  border: 0;
 }
 
-#options {
+body {
+  font-family: DynaPuff, cursive;
+  background-color: rgb(51, 51, 51);
+  color: whitesmoke;
+}
+
+.centerDiv {
   display: flex;
+  justify-content: center;
+}
+
+.ball {
+  background-color: aquamarine;
+  border: 2px white solid;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
 
 @media screen and ( max-width : 425px ) {
 
+  #header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #logo {
+    width: 90%;
+  }
+
+  #title {
+    display: flex;
+    justify-content: center;
+  }
+
+  /*
+
+    Ideia de fazer as letras coridas mas não ficou muito bom
+   font-size: 50px;
+    background-image: linear-gradient(
+      90deg, red, orange, yellow, green, blue, indigo, violet);
+    stylelint-disable-next-line all
+    -webkit-background-clip: text;
+    color: transparent;
+
+    */
+
+  #rgb-color {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #options {
+    width: 80%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px;
+  }
+
+  #textContainer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ballsContainer {
+    display: flex;
+    gap: 6px;
+  }
+
+  #answer {
+    text-align: center;
+  }
+
+  #reset-game {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: DynaPuff, cursive;
+    width: 60%;
+    height: 6vh;
+  }
 }
 
-@media screen and ( min-width : 426px ) and ( max-width : 768px ) {
+/* @media screen and ( min-width : 426px ) and ( max-width : 768px ) {}
 
-}
-
-@media screen and ( min-width : 769px ) {
-
-}
+@media screen and ( min-width : 769px ) {} */

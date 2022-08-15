@@ -24,7 +24,7 @@ const colorElements = () => {
 const colorRight = () => {
   const pickACollor = rndNumber(1, 6);
   const color = balls[pickACollor].style.backgroundColor;
-  document.querySelector('#rgb-color').innerHTML = `Adivinhe esta cor: ${color}`;
+  document.querySelector('#rgb-color').innerHTML = `Adivinhe esta cor: <br><br> ${color}`;
   const oldWinner = document.querySelector('.win');
   if (oldWinner) oldWinner.classList.remove('win');
   balls[pickACollor].classList.add('win');
@@ -33,9 +33,6 @@ const colorRight = () => {
 function colorOnLoad() {
   colorElements();
   colorRight();
-
-  const rightAnswer = document.querySelector('#answer');
-  rightAnswer.innerHTML = 'Escolha uma cor';
 }
 
 function resposta({ target }) {
