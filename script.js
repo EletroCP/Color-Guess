@@ -57,6 +57,7 @@ const loadScore = () => {
     addPlayer(name, points, data);
   });
 };
+//
 
 function colorOnLoad() {
   if (localStorage.score) {
