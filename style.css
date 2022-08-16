@@ -272,6 +272,126 @@ body {
 
 }
 
-/*
+@media screen and ( min-width : 821px ) {
 
-@media screen and ( min-width : 769px ) {} */
+  body {
+    font-size: 20px;
+  }
+
+  #header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #logo {
+    width: 36vw;
+  }
+
+  #title {
+    display: flex;
+    justify-content: center;
+  }
+
+  #rgb-color {
+    text-align: center;
+  }
+
+  #options {
+    width: 75%;
+    border: 2px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px;
+  }
+
+  #textContainer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ball {
+    background-color: aquamarine;
+    border: 3px whitesmoke solid;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+
+  .ballsContainer {
+    display: flex;
+    gap: 8px;
+  }
+
+  #answer {
+    text-align: center;
+  }
+
+  .reset-game {
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    font-family: DynaPuff, cursive;
+    font-size: 20px;
+    width: 55%;
+    height: 6vh;
+  }
+
+  #scoreBoard {
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(19, 102, 185, 0.699);
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  #players {
+    width: 70%;
+    height: 50vh;
+    border: 2px whitesmoke solid;
+  }
+
+  .points {
+    display: flex;
+    gap: 5px;
+    padding-left: 5px;
+    justify-content: space-around;
+  }
+
+  #playerName {
+    font-family: DynaPuff, cursive;
+    font-size: 20px;
+    background-color: transparent;
+    color: whitesmoke;
+    border-top: 2px;
+    border-bottom: 2px;
+    border-color: whitesmoke;
+    border-style: solid;
+    width: 100vw;
+    height: 60px;
+    text-align: center;
+    align-items: center;
+  }
+
+  #playerName::placeholder {
+    color: aliceblue;
+  }
+
+  #removeBoard {
+    border-color: red;
+  }
+
+  #secondContainer {
+    padding-bottom: 22px;
+  }
+
+}
